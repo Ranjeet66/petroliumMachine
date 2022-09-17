@@ -1,0 +1,496 @@
+{
+	"info": {
+		"_postman_id": "71db74bd-f469-440e-a42b-71128e9f88d6",
+		"name": "Petroleum Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/user/signUp",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"signUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "otpVerify",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/user/otpVerify",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"otpVerify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resendOtp",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"rickysingh995@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/user/resendOtp",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"resendOtp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"rickysingh995@gmail.com\",\n    \"password\":\"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgotPassword",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/user/forgotPassword",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"forgotPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resetPassword",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"rickysingh995@gmail.com\",\n    \"otp\":\"154193\",\n    \"newPassword\":\"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/user/resetPassword",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"resetPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProfile",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "changePassword",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjdiODZhZTk3NTYwN2VhNDU5ZTgxMjciLCJlbWFpbCI6InJpY2t5c2luZ2g5OTVAZ21haWwuY29tIiwiaWF0IjoxNjUyMjYzNzc3LCJleHAiOjE2NTIyNjczNzd9.s8ss6iQ15l73YBwxZ_J8N5dQoYkpDYY4FbDkpfCUojE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\":\"12345\",\n    \"newPassword\":\"123456\",\n    \"confirmNewPassword\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/user/changePassword",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"changePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjdiODZhZTk3NTYwN2VhNDU5ZTgxMjciLCJlbWFpbCI6InJpY2t5c2luZ2g5OTVAZ21haWwuY29tIiwiaWF0IjoxNjUyMjY0MjgxLCJleHAiOjE2NTIyNjc4ODF9.A1RKKloL2ydaP0qgAQFKKn6tm8Qj0hkP3m6ioevTjHw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/user/listUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"listUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjdiODZhZTk3NTYwN2VhNDU5ZTgxMjciLCJlbWFpbCI6InJpY2t5c2luZ2g5OTVAZ21haWwuY29tIiwiaWF0IjoxNjUyMjY0MjgxLCJleHAiOjE2NTIyNjc4ODF9.A1RKKloL2ydaP0qgAQFKKn6tm8Qj0hkP3m6ioevTjHw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/user/viewUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"viewUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editProfile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjdiODZhZTk3NTYwN2VhNDU5ZTgxMjciLCJlbWFpbCI6InJpY2t5c2luZ2g5OTVAZ21haWwuY29tIiwiaWF0IjoxNjUyMjY1MzM5LCJleHAiOjE2NTIyNjg5Mzl9.6zdNsEbuDjdlXN9d_XFrPZ_yhrAJYlkZQEogIQfHk50",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"street\":\"55\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/user/editProfile",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"editProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewMachineDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/user/viewMachineDetails",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"viewMachineDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "qrCode",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjdiODZhZTk3NTYwN2VhNDU5ZTgxMjciLCJlbWFpbCI6InJpY2t5c2luZ2g5OTVAZ21haWwuY29tIiwiaWF0IjoxNjUyMjY1MzM5LCJleHAiOjE2NTIyNjg5Mzl9.6zdNsEbuDjdlXN9d_XFrPZ_yhrAJYlkZQEogIQfHk50",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3001/user/qrCode",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"user",
+						"qrCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "machineNozzel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "machineName",
+							"value": "dfgrg",
+							"type": "text"
+						},
+						{
+							"key": "nozzel",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "machineColor",
+							"value": "tret",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3001/machine/machineNozzel",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"machine",
+						"machineNozzel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "machineList",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "editMachine",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "machineName",
+							"value": "r56dfgrtg",
+							"type": "text"
+						},
+						{
+							"key": "nozzel",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3001/machine/editMachine",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"machine",
+						"editMachine"
+					],
+					"query": [
+						{
+							"key": "machineName",
+							"value": "r56dfgrtg",
+							"disabled": true
+						},
+						{
+							"key": "nozzel",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listStatic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/static/listStatic",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"static",
+						"listStatic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewStatic",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\": \"625417d948d185aa6fc0dbdf\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/static/viewStatic",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"static",
+						"viewStatic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editStatic",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

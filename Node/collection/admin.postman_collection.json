@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "e05faed4-006f-493f-a59b-ffecc63853f0",
+		"name": "admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "adminResendOtp",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"palrahul995@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/admin/adminResendOtp",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"adminResendOtp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminOtpVerify",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/admin/adminOtpVerify",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"adminOtpVerify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminForgotPassword",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"palrahul995@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/admin/adminForgotPassword",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"adminForgotPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminResetPassword",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"palrahul995@gmail.com\",\n    \"otp\":\"151972\",\n    \"newPassword\":\"1234567\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/admin/adminResetPassword",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"adminResetPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"palrahul995@gmail.com\",\n    \"password\":\"1234567\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/admin/adminLogin",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"adminLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminChangePassword",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjZhMmVlYzQ0NTEwNzQ1Yjk2ODYyNTUiLCJlbWFpbCI6InBhbHJhaHVsOTk1QGdtYWlsLmNvbSIsImlhdCI6MTY1MjI3MDU1MSwiZXhwIjoxNjUyMjc0MTUxfQ.-sclN72J8NNSJkVClzpOmnH_hqDhUsXPr2NcG4qhKM0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"password\":\"1234567\",\n     \"newPassword\":\"12345678\",\n      \"confirmNewPassword\":\"12345678\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/admin/adminChangePassword",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"adminChangePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminEditProfile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/admin/adminEditProfile",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"adminEditProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminViewUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/admin/adminViewProfile",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"admin",
+						"adminViewProfile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
